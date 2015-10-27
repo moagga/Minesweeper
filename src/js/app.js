@@ -34,6 +34,8 @@
 		cols = l.cols;
 		mines = l.mines;
 		max = rows * cols;
+		
+		$('#difficulty').val(options.level);
 
 		$('.board').removeClass('easy medium hard').addClass(options.level);
 	};
@@ -327,11 +329,12 @@
 	$('.board').dblclick(_onDblClick);
 	$('.board').bind('contextmenu', _onRightClick);
 	$('.reset').click(reset);
-	$('#difficulty').change(function(e){
-		var v = $('#difficulty').val();
+	$('.levelLink').click(function(){
+	  var v = $(this).attr('rel');
 		Ms.Settings.level(v);
 		Ms.configure({level: v});
 		Ms.reset();
+	  
 	});
 	
 	Ms.configure = configure;
@@ -340,6 +343,7 @@
 })();
 Ms.Settings.init(function(){
   var l = Ms.Settings.level();
-  Ms.configure({level: 'medium'});
+  l = l || 'easy';
+  Ms.configure({level: l});
   Ms.reset();
 });
