@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minesweeper</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet" >
+	<link href="css/ms.css" rel="stylesheet" >
+</head>
+<body>
+
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col-md-2 sidebar">
+
+				<div class="row">
+				  <img src="img/48.png">
+				</div>
+
+        <div class="list-group control-group">
+
+  				<div class="list-group-item control inactive">
+  				  <button type="button" class="btn btn-lg center-block" title="Reset">
+              <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+            </button>
+  				</div>
+
+  				<div class="list-group-item control inactive">
+  					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+  					<span class="time pull-right"></span>
+  				</div>
+
+  				<div class="list-group-item control inactive ">
+  					<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+  					<span class="mines pull-right"></span>
+  				</div>
+
+  				<div class="list-group-item control inactive">
+  					<select id="difficulty" class="form-control">
+  					  <option value="easy">Easy</option>
+  					  <option value="medium" selected="">Medium</option>
+  					  <option value="hard">Hard</option>
+  					</select>
+  				</div>
+
+  				<div class="list-group-item control inactive">
+  				  <h2>Best Score</h2>
+  				  <ul class="list-group">
+  				    <li class="list-group-item">Easy</li>
+  				    <li class="list-group-item">Medium</li>
+  				    <li class="list-group-item">Hard</li>
+  				  </ul>
+  				</div>
+  				
+        </div>
+
+      </div>
+      <div class="col-md-10">
+        <div class="board"></div>
+      </div>
+    </div>
+    
+    
+  </div>
+  
+<!--  
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="row controls digital">
+				<div class="col col-xs-2 ">
+					<span class="time"></span>
+					<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+				</div>
+				<div class="col col-xs-2 ">
+					<span class="mines"></span>
+					<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+				</div>
+				<div class="col col-xs-4">&nbsp;</div>
+				<div class="col col-xs-2 pull-right">
+					<select id="difficulty" class="form-control">
+					  <option value="easy">Easy</option>
+					  <option value="medium" selected="">Medium</option>
+					  <option value="hard">Hard</option>
+					</select>
+				</div>
+				<div class="col col-xs-2 pull-right">
+					<a class="reset" >
+						<span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+-->
+<!--
+	<div class="container">
+		<div class="board"></div>
+	</div>
+-->	
+<!--	
+	<nav class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container score">Best score</div>
+	</nav>
+-->
+</body>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+
+</html>
