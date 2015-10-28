@@ -4,7 +4,7 @@
 	var rows, cols, mines, max;
 	
 	//Game variables
-	var model, remaining, matchedMinesCount, timer, time, running;
+	var model, remaining, matchedMinesCount, timer, time, running, level;
 	
 	var state = {
 		running: false,
@@ -29,7 +29,8 @@
 	};
 	
 	var configure = function(options){
-		var l = levels[options.level];
+	  level = options.level;
+		var l = levels[level];
 		rows = l.rows;
 		cols = l.cols;
 		mines = l.mines;
@@ -188,6 +189,12 @@
 		stopTick();
 		if (options.win){
 			$('.board').addClass('win');
+			var t = $('.time').html();
+			t = parseInt(t);
+			var hs = Ms.Settings.scores(level) || 0;
+			if (t > hs){
+			  
+			}
 		} else {
 			$('.board').addClass('loss');
 		}
@@ -225,14 +232,6 @@
 		var v = model[r][c];
 
 		_open(r,c);
-/*		
-		if (v === -1){
-			_doom();
-			return;
-		} else {
-			_open(r,c);
-		}
-*/		
 	};
 	
 	var _onDblClick = function(e){

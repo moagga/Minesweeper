@@ -1,10 +1,25 @@
+body{
+  background: radial-gradient(#37474F, #263238);
+  
+}
 .container{
 	padding-right: 0;
 	padding-left: 0;
 }
+.navbar{
+  background-color: #FFAB00;
+  border: none;
+  border-radius: 0px;
+}
+.counters {
+  font-size: 20px;
+  
+}
+.counters:first-child{
+  margin-left:150px;
+}
 .board{
-	box-shadow: 0 0 10px 2px #CECECE;
-#	background: #616161;
+#	box-shadow: 0 0 10px 2px #CECECE;
 }
 .board.win{
 	box-shadow: 0 0 10px 2px #669900;
@@ -13,27 +28,27 @@
 	box-shadow: 0 0 10px 2px #CC0000;
 }
 .board.easy{
-	margin: 10% 30%;
+	margin: 12% 33%;
 	width: 217px;
 	height: 217px;
 }
 .board.medium{
-	margin: 0 20%;
+	margin: 2% 23%;
   width: 385px;
 	height: 385px;
 }
 .board.hard{
+	margin: 1% 2%;
 	width: 720px;
-	height: 382px;
+	height: 383px;
 }
 .r{
 	clear: both;
 }
 .c{
+#  background-color: #64B5F6;
 	height: 20px;
 	width: 20px;
-#	border-bottom: 1px solid #FFF;
-#	border-right: 1px solid #FFF;
 	border-radius: 1px;
 	float: left;
 	text-align: center;
@@ -43,68 +58,45 @@
 	cursor: default;
 	-webkit-user-select: none;
 	-moz-user-select: none;
-	background: radial-gradient(circle at right center, #ffecb3, #ffe082);
-#	background: radial-gradient(circle at top right, #FFFFFF, #E0E0E0);
+	background: radial-gradient(circle, #90CAF9, #64B5F6);
 	margin: 2px;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
 	
-}
-.board .r:first-child .c{
-#	border-top: 1px solid #B6B6B6;
-}
-.r .c:first-child{
-#	border-left: 1px solid #B6B6B6;
 }
 .c.open{
 	background: #FFF;
-	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .5) inset;
-#	border-bottom: 1px solid #B6B6B6;
-#	border-right: 1px solid #B6B6B6;
-}
-.board .r:first-child .c.open{
-#	border-top: 1px solid #B6B6B6;
-}
-.r .c.open:first-child{
-#	border-left: 1px solid #B6B6B6;
+	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, .75) inset;
 }
 .doom{
 	padding-top: 3px;
 }
 .mine{
-	background: #C58917;
+	background: #FFAB00;
 	padding-top: 3px;
 }
 .c.one{
-#	color: #33691e;
-	color: #0099CC;
+	color: #1A237E;
 }
 .c.two{
-#	color: #880e4f;
 	color: #669900;
 }
 .c.three{
-#	color: #311b92;
 	color: #CC0000;
 }
 .c.four{
-#	color: #E65100;
 	color: #9933CC;
 }
 .c.five{
-#	color: #FF8800;
 	color: #FF8800;
 }
 .c.six{
-#	color: #000080;
 	color: #000080;
 }
 .c.seven{
 	color: #800000;
-#	color: #800000;
 }
 .c.eight{
 	color: #000000;
-#	color: #000000;
 }
 .digital{
 	font-family: Consolas;

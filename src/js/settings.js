@@ -41,23 +41,6 @@ var Ms = Ms || {};
 		}
 	};
 	
-	var dateFormat = function(options){
-		var formats = {
-			dateFirst : 'dd MMM yyyy',
-			monthFirst: 'MMM dd yyyy'
-		};
-		var form = get('dateFormat');
-		return formats[form];
-	};
-	
-	var weekView = function(){
-		return get('weekView');
-	};
-
-	var dayHour = function(){
-		return get('dayHour');
-	};
-	
 	var level = function(value){
 	  if (value){
 	    set({level: value});
