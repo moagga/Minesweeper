@@ -1,44 +1,76 @@
 body{
-  background: radial-gradient(#37474F, #263238);
-  
+  font-family: Comic Sans MS;
+}
+.sidebar{
+  background-color: #FFAB00;
+  width: 250px;
+  height: 500px;
+  box-shadow: 0 -5px 5px 5px #212F3D;
+}
+.sidebar .row{
+  border-bottom: 1px solid #566573;
+  padding: 10px 0 10px 30px;
+  margin-right: 0;
 }
 .container{
-	padding-right: 0;
-	padding-left: 0;
+  background: radial-gradient(#EEE, #000);
+  padding-left: 250px;
+  padding-right: 0;
+  height: 500px;
+  width: 1100px;
+  margin-left: 0;
+  margin-right: 0;
 }
-.navbar{
-  background-color: #FFAB00;
+.container.loss{
+  background: radial-gradient(#CC0000, #000);
+}
+.container.win{
+  background: radial-gradient(#669900, #000);
+}
+.controls .well {
+  font-size: 25px;
+  background-color: inherit;
   border: none;
-  border-radius: 0px;
+  border-radius: 0;
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 10px 10px 10px 70px;
 }
-.counters {
-  font-size: 20px;
-  
+.controls .well span.glyphicon{
+  margin-right: 20px;
 }
-.counters:first-child{
-  margin-left:150px;
+.controls .well span:last-child{
+  text-align: right;
 }
-.board{
-#	box-shadow: 0 0 10px 2px #CECECE;
+.counters span{
+  font-size: 30px;
 }
-.board.win{
-	box-shadow: 0 0 10px 2px #669900;
+.nav-pills .list-group-item{
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  margin-right: 10px;
 }
-.board.loss{
-	box-shadow: 0 0 10px 2px #CC0000;
+.nav-pills .list-group-item button{
+  border: none;
+  border-radius: 0;
+}
+.nav-pills .list-group-item.active button{
+  background: #566573;
+  border-color: #566573;
 }
 .board.easy{
-	margin: 12% 33%;
+	margin: 16% 40%;
 	width: 217px;
 	height: 217px;
 }
 .board.medium{
-	margin: 2% 23%;
+	margin: 6% 28%;
   width: 385px;
 	height: 385px;
 }
 .board.hard{
-	margin: 1% 2%;
+	margin: 6% 8%;
 	width: 720px;
 	height: 383px;
 }
@@ -61,7 +93,7 @@ body{
 	background: radial-gradient(circle, #90CAF9, #64B5F6);
 	margin: 2px;
 	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
-	
+
 }
 .c.open{
 	background: #FFF;

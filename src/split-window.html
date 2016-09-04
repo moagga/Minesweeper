@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Minesweeper</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/bootstrap-theme.min.css1" rel="stylesheet" >
+	<link href="css/ms.css" rel="stylesheet" >
+</head>
+<body>
+
+
+  <div class="affix sidebar">
+		<div class="row logo">
+			<h2>
+			    <span class="glyphicon glyphicon-certificate"></span>
+			    Minesweeper
+			  </h2>
+		</div>
+
+		<div class="row reset-container">
+			<button title="Reset" class="btn btn-lg reset center-block">
+  			<span aria-hidden="true" class="glyphicon glyphicon-repeat">	</span>
+  			Restart
+			</button>
+		</div>
+
+		<div class="row controls">
+			<div class="well">
+			  <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+				<span class="time"></span>
+			</div>
+
+			<div class="well">
+			  <span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+				<span class="mines"></span>
+			</div>
+		</div>
+
+		<div class="row difficulty">
+			<ul class="nav nav-pills">
+				<li class="list-group-item">
+					<button title="Reset" class="btn btn-default levelLink" rel="easy">Easy</button>
+				</li>
+				<li class="list-group-item">
+					<button title="Reset" class="btn btn-default levelLink" rel="medium">Medium</button>
+				</li>
+				<li class="list-group-item">
+					<button title="Reset" class="btn btn-default levelLink" rel="hard">Hard</button>
+				</li>
+			</ul>
+		</div>
+
+		<div class="row scores">
+			<h4>Scores</h4>
+			<dl class="dl-horizontal">
+  			<dt>Easy</dt>
+  			<dd class='easyScore'>0</dd>
+				<dt>Medium</dt>
+  			<dd class='mediumScore'>0</dd>
+				<dt>Hard</dt>
+  			<dd class='hardScore'>0</dd>
+			</dl>
+		</div>
+
+  </div>
+
+
+	<div class="container">
+		<div class="board"></div>
+	</div>
+
+</body>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/app.js"></script>
+
+</html>
