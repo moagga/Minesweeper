@@ -63,7 +63,7 @@ var Ms = Ms || {};
 			set(o);
 		} else {
 			var s = get(level);
-			s = s || 0;
+			s = s || Number.POSITIVE_INFINITY;
 			return s;
 	  }
 	};

@@ -109,6 +109,9 @@
 		$.each(['easyScore', 'mediumScore', 'hardScore'], function(index, value){
 			var l = value;
 			var s = Ms.Settings.scores({level : l});
+			if (s === Number.POSITIVE_INFINITY){
+				s = '-';
+			}
 			$('.' + l).html(s);
 		});
 	}
@@ -189,6 +192,20 @@
 
 	var finishIfApplicable = function(){
 		if (matchedMinesCount === mines){
+			//Open all remaining cells
+			$('div.c').each(function(){
+
+				var dirty = $(this).hasClass('open') || $(this).hasClass('mine');
+				if (!dirty){
+
+					var id = $(this).attr('id');
+					var r = parseInt(id.split('_')[0]);
+					var c = parseInt(id.split('_')[1]);
+
+					_open(r,c);
+				}
+			});
+
 			finish({win: true});
 		}
 	};
@@ -202,7 +219,7 @@
 			var t = $('.time').html();
 			t = parseInt(t);
 			var hs = Ms.Settings.scores({level : level + 'Score'});
-			if (t > hs){
+			if (t < hs){
 				var scr = {level : level + 'Score'};
 				scr.value = t;
 				Ms.Settings.scores(scr);
@@ -242,7 +259,6 @@
 		var id = $(e.target).attr('id');
 		var r = parseInt(id.split('_')[0]);
 		var c = parseInt(id.split('_')[1]);
-		var v = model[r][c];
 
 		_open(r,c);
 	};

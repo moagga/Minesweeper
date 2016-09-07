@@ -60,17 +60,17 @@ body{
   border-color: #566573;
 }
 .board.easy{
-	margin: 16% 40%;
+	margin: 16% 33%;
 	width: 217px;
 	height: 217px;
 }
 .board.medium{
-	margin: 6% 28%;
+	margin: 6% 25%;
   width: 385px;
 	height: 385px;
 }
 .board.hard{
-	margin: 6% 8%;
+	margin: 6%;
 	width: 720px;
 	height: 383px;
 }
@@ -78,20 +78,19 @@ body{
 	clear: both;
 }
 .c{
-#  background-color: #64B5F6;
 	height: 20px;
 	width: 20px;
 	border-radius: 1px;
 	float: left;
 	text-align: center;
 	vertical-align: middle;
-	font-family: Consolas;
+#	font-family: Consolas;
 	font-weight: bold;
 	cursor: default;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	background: radial-gradient(circle, #90CAF9, #64B5F6);
-	margin: 2px;
+	margin: 1px;
 	box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 1);
 
 }

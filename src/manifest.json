@@ -9,15 +9,15 @@
 			"scripts": ["launcher.js"]
 		}
 	},
-	
+
 	"permissions": [
-          "storage"
-    ],
-	
+  	"storage"
+  ],
+
 	"icons": {
-		"16" : "img/16.png", 
+		"16" : "img/16.png",
 		"48" : "img/48.png",
-		"128" : "img/128.png" 
+		"128" : "img/128.png"
 	}
-	
+
 }
